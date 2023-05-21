@@ -1,52 +1,19 @@
-# Prerequisites
-*.d
+ #include <stdio.h>
+#include <cs50.h>
+#include <string.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int main(void) {
+	string s = get_string("Befor: ");
+	printf("After: ");
+	for (int i = 0; i < strlen(s); i++) {
+		if (s[i] >= 'a' && s[i] <= 'z') {
+			printf("%c", s[i] - 32);
 
-# Linker output
-*.ilk
-*.map
-*.exp
+		}
+		else {
+			printf("%c", s[i]);
+		}
 
-# Precompiled Headers
-*.gch
-*.pch
+	}
+	printf("/n");
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
